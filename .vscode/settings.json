@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "Day2",
-        "Array"
+        "Array",
+        "String"
     ]
 }
