@@ -1,7 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "Day2",
+        "String",
         "Array",
-        "String"
+        "Linked List"
     ]
 }
