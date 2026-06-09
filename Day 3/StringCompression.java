@@ -1,35 +1,31 @@
 import java.util.*;
+
 public class StringCompression {
-    public static String compressString(String str) {
-        if (str == null || str.length() == 0) {
+
+    public static String compressedString(String str){
+        if(str==null || str.isEmpty())
             return str;
-        }
-        
-        StringBuilder compressed = new StringBuilder();
-        int count = 1;
-        
-        for (int i = 1; i < str.length(); i++) {
-            if (str.charAt(i) == str.charAt(i - 1)) {
+
+        StringBuilder br=new StringBuilder();
+        int count =1;
+        for(int i=0;i<str.length();i++){
+            if(i+1<str.length() && str.charAt(i)==str.charAt(i+1)){
                 count++;
-            } else {
-                compressed.append(str.charAt(i - 1)).append(count);
-                count = 1;
+            }
+            else{
+                br.append(str.charAt(i));
+                br.append(count);
+                count=1;
             }
         }
-        
-        // Append the last character and its count
-        compressed.append(str.charAt(str.length() - 1)).append(count);
-        
-        // Return the compressed string only if it's shorter than the original
-        return compressed.length() < str.length() ? compressed.toString() : str;
+        return br.toString();
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        // Read input from console
-        String input = sc.nextLine();
-        String compressed = compressString(input);
-        sc.close();
-        System.out.println("Original: " + input);
-        System.out.println("Compressed: " + compressed);
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        //aaaabbb-> a4b3
+        String result=compressedString(str);
+        System.out.println(result);
     }
 }
+
