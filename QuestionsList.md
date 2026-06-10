@@ -124,3 +124,11 @@
 94. Divide an array into parts and fill one by one from both arrays ✔️
 95. Next greater element ✔️
 96. Circular double ended queue implementation using linked list ✔️
+
+# DAY 10
+## Assessment Questions
+
+
+## Company Specific Psuedocode Questions
+
+1. 
