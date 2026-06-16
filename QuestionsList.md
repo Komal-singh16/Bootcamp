@@ -131,4 +131,15 @@
 
 ## Company Specific Psuedocode Questions
 
-1. 
+1. a=26, b=168
+ Read a,b
+    function func(a,b)
+    t=0;
+    while(b!=0)
+        t=t+a
+        b=b-1
+    end while
+    return t;
+ end function
+
+solution = 26*168= 4368
